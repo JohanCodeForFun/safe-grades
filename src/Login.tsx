@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <h1>Login</h1>
-      <NavLink to="/">
-        <button>Home</button>
+      <NavLink to="/dashboard">
+        <button>Go to Dashboard</button>
       </NavLink>
     </>
   )
