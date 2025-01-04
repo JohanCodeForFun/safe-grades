@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles/Dashboard.css'
+import Canvas from './components/Canvas';
 
 function App() {
   const [isToggled, setIsToggled] = useState(false);
@@ -19,7 +20,7 @@ function App() {
       </div>
       <div>
         <div className={isToggled ? 'right' : 'hidden'}>
-          world
+          <Canvas height={240} width={320} />
         </div>
       </div>
     </div>
