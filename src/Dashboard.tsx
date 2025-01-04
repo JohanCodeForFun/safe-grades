@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './styles/App.css'
+import './styles/Dashboard.css'
 
 function App() {
   const [isToggled, setIsToggled] = useState(false);
@@ -8,23 +8,21 @@ function App() {
     setIsToggled(!isToggled);
   }
   return (
-    <>
+    <div className={isToggled ? 'split-screen' : 'fullscreen'}>
+      <div className="left">
+
       <h1>Dashboard</h1>
-      <div>
       <button onClick={handleToggleVM}>
         {isToggled ? 'Shutdown VM' : 'Launch VM'}
         </button>
         {isToggled && <div>Virtual machine is on.</div>}
       </div>
-      <div className="split-screen">
-        <div className="left">
-          hello
-        </div>
+      <div>
         <div className="right">
           world
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

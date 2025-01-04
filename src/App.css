@@ -4,24 +4,3 @@
   padding: 2rem;
   text-align: center;
 }
-
-.split-screen {
-  display: flex;
-  height: 100vh;
-  background-color: yellow !important;
-}
-
-.split-screen .left,
-.split-screen .right {
-  flex: 1;
-  display: flex;
-}
-
-.split-screen .left {
-  background-color: red;
-  color: red;
-}
-
-.split-screen .right {
-  background-color: green;
-}
