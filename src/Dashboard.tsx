@@ -16,6 +16,14 @@ function App() {
         </button>
         {isToggled && <div>Virtual machine is on.</div>}
       </div>
+      <div className="split-screen">
+        <div className="left">
+          hello
+        </div>
+        <div className="right">
+          world
+        </div>
+      </div>
     </>
   )
 }
