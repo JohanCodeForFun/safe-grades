@@ -1,11 +1,18 @@
 .fullscreen {
   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
 }
 
 .split-screen {
   display: flex;
   height: 100vh;
-  background-color: yellow !important;
 }
 
 .split-screen .left,

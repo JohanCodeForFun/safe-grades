@@ -15,10 +15,10 @@ function App() {
       <button onClick={handleToggleVM}>
         {isToggled ? 'Shutdown VM' : 'Launch VM'}
         </button>
-        {isToggled && <div>Virtual machine is on.</div>}
+        {isToggled ? <p>Virtual machine is on.</p> : <p>Start a virtual machine...</p>}
       </div>
       <div>
-        <div className="right">
+        <div className={isToggled ? 'right' : 'hidden'}>
           world
         </div>
       </div>
