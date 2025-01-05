@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 
 interface CanvasProps extends React.HTMLAttributes<HTMLCanvasElement> {
-  height?: number;
-  width?: number;
+  height: number;
+  width: number;
 }
 
 const Canvas: React.FC<CanvasProps> = props => {
