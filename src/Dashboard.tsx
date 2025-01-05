@@ -19,6 +19,10 @@ function App() {
         {isToggled ? <p>Virtual machine is on.</p> : <p>Start a virtual machine...</p>}
       </div>
       <div>
+        <h1>WebRTC</h1>
+        <a href="https://webrtc.org">link to webrtc website</a>
+        <br />
+        <a href="https://webrtc.github.io/samples/src/content/peerconnection/multiple-relay/">link to webrtc example</a>
         <div className={isToggled ? 'right' : 'hidden'}>
           <Canvas height={240} width={320} />
         </div>
