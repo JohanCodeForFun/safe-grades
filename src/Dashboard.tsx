@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './styles/Dashboard.css'
 import Canvas from './components/Canvas';
+import WebRTCComponent from './components/WebRTC';
 
 function App() {
   const [isToggled, setIsToggled] = useState(false);
@@ -19,7 +20,8 @@ function App() {
         {isToggled ? <p>Virtual machine is on.</p> : <p>Start a virtual machine...</p>}
       </div>
       <div>
-        <h1>WebRTC</h1>
+        <WebRTCComponent />
+
         <a href="https://webrtc.org">link to webrtc website</a>
         <br />
         <a href="https://webrtc.github.io/samples/src/content/peerconnection/multiple-relay/">link to webrtc example</a>
