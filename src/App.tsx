@@ -1,19 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router'
 import './styles/App.css'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import BenefitsSection from './components/BenefitsSection'
-import StorySection from './components/StorySection'
-import SignupSection from './components/SignupSection'
+import Home from './Home.tsx'
+import Login from './Login.tsx'
+import Dashboard from './Dashboard.tsx'
 
 function App() {
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <BenefitsSection />
-      <StorySection />
-      <SignupSection />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
