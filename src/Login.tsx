@@ -1,31 +1,20 @@
 import './styles/App.css'
-import { NavLink } from 'react-router'
+import { Authenticator } from '@aws-amplify/ui-react';
+import { Amplify } from 'aws-amplify';
+import outputs from '@/amplify_outputs.json';
+import '@aws-amplify/ui-react/styles.css';
 
-/* 
-wip login
-https://docs.amplify.aws/angular/build-a-backend/auth/set-up-auth/
+Amplify.configure(outputs);
 
-<amplify-authenticator>
-  <ng-template
-    amplifySlot="authenticated"
-    let-user="user"
-    let-signOut="signOut"
-  >
-    <h1>Welcome {{ user.username }}!</h1>
-    <button (click)="signOut()">Sign Out</button>
-  </ng-template>
-</amplify-authenticator>
-*/
-
-function App() {
+export default function App() {
   return (
-    <>
-      <h1>Login</h1>
-      <NavLink to="/dashboard">
-        <button>Go to Dashboard</button>
-      </NavLink>
-    </>
-  )
-}
-
-export default App
+    <Authenticator>
+      {({ signOut, user }) => (
+        <main>
+          <h1>Hello {user?.username}</h1>
+          <button onClick={signOut}>Sign out</button>
+        </main>
+      )}
+    </Authenticator>
+  );
+};
