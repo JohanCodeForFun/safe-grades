@@ -6,6 +6,8 @@ import '@aws-amplify/ui-react/styles.css';
 
 Amplify.configure(outputs);
 
+console.log("pow!")
+
 export default function App() {
   return (
     <Authenticator>
